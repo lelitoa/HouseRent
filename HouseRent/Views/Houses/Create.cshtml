@@ -1,0 +1,52 @@
+﻿@model HouseRent.Models.House
+
+@{
+    ViewData["Title"] = "Dodawanie";
+}
+
+@*<h1>Dodaj domek</h1>*@
+
+<div class="col-6">
+    <h1 class="text-info">Dodaj domek</h1>
+</div>
+
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Nazwa" class="control-label">Nazwa domku</label>
+                <input asp-for="Nazwa" class="form-control" />
+                <span asp-validation-for="Nazwa" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Adres" class="control-label"></label>
+                <input asp-for="Adres" class="form-control" />
+                <span asp-validation-for="Adres" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Ilosc_osob" class="control-label">Ilość osób</label>
+                <input asp-for="Ilosc_osob" class="form-control" />
+                <span asp-validation-for="Ilosc_osob" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Cena_za_dobe" class="control-label">Cena za dobę [PLN]</label>
+                <input asp-for="Cena_za_dobe" class="form-control" />
+                <span asp-validation-for="Cena_za_dobe"class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Dodaj" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Wróć do listy domków</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
