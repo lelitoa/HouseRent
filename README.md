@@ -8,5 +8,5 @@ Dodatkowo aplikacja zawiera WebAPI REST, testy jednostkowe oraz wyszukiwanie na 
 ## Instalacja
 1. W pliku [appsettings.json](./HouseRent/appsettings.json) w parametrze `DefaultConnection` zmienić ścieżkę do bazy danych `Server=<DOMYŚLNA BAZA DANYCH>`.
 ```json
-"DefaultConnection": "Server=<DOMYŚLNA BAZA DANYCH>;Database=aspnet-HouseRent-8BD7900E-0FB0-4160-A41D-3E94FF90760D;Trusted_Connection=True;MultipleActiveResultSets=true""
+"DefaultConnection": "Server=<DOMYŚLNA BAZA DANYCH>;Database=aspnet-HouseRent-8BD7900E-0FB0-4160-A41D-3E94FF90760D;Trusted_Connection=True;MultipleActiveResultSets=true"
 ```
