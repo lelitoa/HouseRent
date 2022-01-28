@@ -1,4 +1,5 @@
 using HouseRent.Data;
+using HouseRent.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -27,6 +28,13 @@ namespace HouseRent
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddRazorPages()
+             .AddMvcOptions(options =>
+             {
+                 options.ModelBindingMessageProvider.SetValueMustNotBeNullAccessor(
+               _ => "Pole jest wymagane! ");
+             });
+
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));
@@ -38,7 +46,7 @@ namespace HouseRent
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, IServiceProvider serviceProvider)
         {
             if (env.IsDevelopment())
             {
@@ -66,6 +74,8 @@ namespace HouseRent
                     pattern: "{controller=Home}/{action=Index}/{id?}");
                 endpoints.MapRazorPages();
             });
+            //serviceProvider.GetService<AppIdentityDbContext>().Database.Migrate();
+            serviceProvider.GetService<ApplicationDbContext>().Database.Migrate();
         }
     }
 }

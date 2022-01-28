@@ -13,6 +13,7 @@ namespace HouseRent.Data
             : base(options)
         {
         }
-        public DbSet<HouseRent.Models.House> House { get; set; }
+        public DbSet<House> House { get; set; }
+        //public DbSet<HouseRent.Models.House> House { get; set; }
     }
 }

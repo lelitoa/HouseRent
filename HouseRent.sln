@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.32002.261
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HouseRent", "HouseRent\HouseRent.csproj", "{3C4A7386-AFD9-427A-BFB7-19C8E1D7B083}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HouseRent", "HouseRent\HouseRent.csproj", "{3C4A7386-AFD9-427A-BFB7-19C8E1D7B083}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HouseRentTests", "HouseRentTests\HouseRentTests.csproj", "{6CA94C9A-720B-404F-AC95-213440DC01AF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{3C4A7386-AFD9-427A-BFB7-19C8E1D7B083}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3C4A7386-AFD9-427A-BFB7-19C8E1D7B083}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3C4A7386-AFD9-427A-BFB7-19C8E1D7B083}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6CA94C9A-720B-404F-AC95-213440DC01AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6CA94C9A-720B-404F-AC95-213440DC01AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6CA94C9A-720B-404F-AC95-213440DC01AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6CA94C9A-720B-404F-AC95-213440DC01AF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

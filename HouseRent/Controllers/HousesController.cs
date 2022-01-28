@@ -14,11 +14,17 @@ namespace HouseRent.Controllers
     public class HousesController : Controller
     {
         private readonly ApplicationDbContext _context;
+        //private ICRUDHouseRepository houseList;
 
         public HousesController(ApplicationDbContext context)
         {
-            _context = context;
+            _context = context;            
         }
+
+        //public HousesController(ICRUDHouseRepository houseList)
+        //{
+        //    this.houseList = houseList;
+        //}
 
         // GET: Houses
         public async Task<IActionResult> Index()
